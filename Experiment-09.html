@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        fieldset {
+            border: 2px solid #4CAF50;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        legend {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            margin: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Employee Registration Form</h2>
+
+<form>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        First Name: <input type="text" name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+
+        Email: <input type="email" name="email"><br><br>
+        Phone: <input type="tel" name="phone"><br><br>
+
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        Date of Birth: <input type="date"><br><br>
+
+        Address:<br>
+        <textarea rows="3" cols="30"></textarea><br><br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Professional Details</legend>
+
+        Department:
+        <select>
+            <option>IT</option>
+            <option>HR</option>
+            <option>Finance</option>
+        </select>
+        <br><br>
+
+        Job Role: <input type="text"><br><br>
+
+        Experience: <input type="number"><br><br>
+
+        Skills:
+        <input type="checkbox"> Java
+        <input type="checkbox"> Python
+        <input type="checkbox"> Web Dev
+        <br><br>
+
+        LinkedIn: <input type="url"><br><br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Account Details</legend>
+
+        Employee ID: <input type="text"><br><br>
+
+        Date of Joining: <input type="date"><br><br>
+
+        Password: <input type="password"><br><br>
+
+        Confirm Password: <input type="password"><br><br>
+
+        Upload Resume: <input type="file"><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>

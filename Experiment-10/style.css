@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+/* LEFT SIDE */
+.left {
+    width: 30%;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+.left h1 {
+    color: #22c55e;
+}
+
+.skills span {
+    display: inline-block;
+    background: #22c55e;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 70%;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+.right h2 {
+    color: #0f172a;
+    border-bottom: 2px solid #22c55e;
+}
+
+ul {
+    margin-left: 20px;
+}
+ 
+.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid #22c55e;
+    object-fit: cover;
+}
