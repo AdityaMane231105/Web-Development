@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 12</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background: white;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 12</h1>
+<p>Hospital Appointment System</p>
+
+<table id="outputTable">
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Department</th>
+        <th>Time</th>
+    </tr>
+</table>
+
+<script>
+let xmlData = `
+<hospital>
+    <appointment>
+        <patient_name>Arnav</patient_name>
+        <doctor_name>Dr. Sharma</doctor_name>
+        <department>Cardiology</department>
+        <time>10:30 AM</time>
+    </appointment>
+    <appointment>
+        <patient_name>Riya</patient_name>
+        <doctor_name>Dr. Mehta</doctor_name>
+        <department>Dermatology</department>
+        <time>12:00 PM</time>
+    </appointment>
+    <appointment>
+        <patient_name>Rahul</patient_name>
+        <doctor_name>Dr. Patel</doctor_name>
+        <department>Orthopedics</department>
+        <time>02:15 PM</time>
+    </appointment>
+</hospital>
+`;
+
+let parser = new DOMParser();
+let xmlDoc = parser.parseFromString(xmlData, "application/xml");
+
+let appointments = xmlDoc.getElementsByTagName("appointment");
+let table = document.getElementById("outputTable");
+
+for (let i = 0; i < appointments.length; i++) {
+
+    let patient = appointments[i].getElementsByTagName("patient_name")[0].textContent;
+    let doctor = appointments[i].getElementsByTagName("doctor_name")[0].textContent;
+    let department = appointments[i].getElementsByTagName("department")[0].textContent;
+    let time = appointments[i].getElementsByTagName("time")[0].textContent;
+
+    let row = table.insertRow();
+
+    row.insertCell(0).innerText = patient;
+    row.insertCell(1).innerText = doctor;
+    row.insertCell(2).innerText = department;
+    row.insertCell(3).innerText = time;
+}
+</script>
+
+<br>
+<a href="../index.html">⬅ Back</a>
+
+</body>
+</html>

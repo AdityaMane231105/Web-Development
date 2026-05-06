@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Mane | WD Portfolio</title>
+
+<style>
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f1f1f1;
+    --accent: #007bff;
+}
+
+.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --card: #1e1e1e;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--accent);
+    color: white;
+}
+
+nav button {
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    color: var(--accent);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.about {
+    text-align: center;
+    padding: 20px 40px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Aditya Mane</h2>
+    <button onclick="toggleMode()">🌙 Toggle Mode</button>
+</nav>
+
+<div class="hero">
+    <h1>My Web Development Assignments</h1>
+    <p>Explore all my practical work 👇</p>
+</div>
+
+<div class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Second-Year B.Tech CSE student with an interest in Web Development and UI/UX Design.
+        This website showcases all my practical assignments.
+    </p>
+</div>
+
+<div class="container">
+    <a class="card" href="Experiment-02.html">Experiment 02</a>
+    <a class="card" href="Experiment-03.html">Experiment 03</a>
+    <a class="card" href="Experiment-04.html">Experiment 04</a>
+    <a class="card" href="Experiment-05.html">Experiment 05</a>
+    <a class="card" href="Experiment-06.html">Experiment 06</a>
+    <a class="card" href="Experiment-07.html">Experiment 07</a>
+    <a class="card" href="Experiment-08.html">Experiment 08</a>
+    <a class="card" href="Experiment-09.html">Experiment 09</a>
+    <a class="card" href="Experiment-10_Resume/index.html">Experiment 10</a>
+    <a class="card" href="Experiment-11_XML/index.html">Experiment 11</a>
+    <a class="card" href="Experiment-12_XSLT/index.html">Experiment 12</a>
+    <a class="card" href="Experiment-13_StudentApp/index.html">Experiment 13</a>
+
+
+<footer>
+    © 2026 Aditya Mane | Portfolio Website
+</footer>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>

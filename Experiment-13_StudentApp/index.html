@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 13</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px; 
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background: white;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .A { color: green; font-weight: bold; }
+        .B { color: blue; font-weight: bold; }
+        .C { color: orange; font-weight: bold; }
+        .Fail { color: red; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+
+<h1>Experiment 13</h1>
+<p>Student Result System</p>
+
+<table id="outputTable">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Marks</th>
+        <th>Grade</th>
+    </tr>
+</table>
+
+<script>
+let xmlData = `
+<students>
+    <student>
+        <name>Advait</name>
+        <course>CSE</course>
+        <marks>82</marks>
+    </student>
+    <student>
+        <name>Prajal</name>
+        <course>IT</course>
+        <marks>67</marks>
+    </student>
+    <student>
+        <name>Rahul</name>
+        <course>ENTC</course>
+        <marks>40</marks>
+    </student>
+</students>
+`;
+
+let parser = new DOMParser();
+let xmlDoc = parser.parseFromString(xmlData, "application/xml");
+
+let students = xmlDoc.getElementsByTagName("student");
+let table = document.getElementById("outputTable");
+
+for (let i = 0; i < students.length; i++) {
+
+    let name = students[i].getElementsByTagName("name")[0].textContent;
+    let course = students[i].getElementsByTagName("course")[0].textContent;
+    let marks = parseInt(students[i].getElementsByTagName("marks")[0].textContent);
+
+    let grade = "";
+    if (marks >= 75) grade = "A";
+    else if (marks >= 60) grade = "B";
+    else if (marks >= 50) grade = "C";
+    else grade = "Fail";
+
+    let row = table.insertRow();
+
+    row.insertCell(0).innerText = name;
+    row.insertCell(1).innerText = course;
+    row.insertCell(2).innerText = marks;
+
+    let gradeCell = row.insertCell(3);
+    gradeCell.innerText = grade;
+    gradeCell.className = grade;
+}
+</script>
+
+<br>
+<a href="../index.html">⬅ Back to Home</a>
+
+</body>
+</html>
