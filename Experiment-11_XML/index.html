@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .library {
+            display: block;
+            background-color: lightyellow;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .book {
+            display: block;
+            background-color: white;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .title {
+            display: block;
+            color: blue;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .author {
+            display: block;
+            color: green;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        .price {
+            display: block;
+            color: red;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .xml-content {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .raw-xml {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Experiment 11 - XML Output</h2>
+
+<div class="xml-content">
+    <h3>Styled XML Content:</h3>
+    <div class="library">
+        <div class="book">
+            <div class="title">Data Structures</div>
+            <div class="author">Mark Allen Weiss</div>
+            <div class="price">₹500</div>
+        </div>
+        
+        <div class="book">
+            <div class="title">Operating System</div>
+            <div class="author">Galvin</div>
+            <div class="price">₹650</div>
+        </div>
+        
+        <div class="book">
+            <div class="title">Computer Networks</div>
+            <div class="author">Andrew S. Tanenbaum</div>
+            <div class="price">₹700</div>
+        </div>
+        
+        <div class="book">
+            <div class="title">Database Management System</div>
+            <div class="author">Korth</div>
+            <div class="price">₹600</div>
+        </div>
+    </div>
+    
+    <h3>Raw XML Source:</h3>
+    <div class="raw-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/css" href="library.css"?&gt;
+
+&lt;library&gt;
+    &lt;book&gt;
+        &lt;title&gt;Data Structures&lt;/title&gt;
+        &lt;author&gt;Mark Allen Weiss&lt;/author&gt;
+        &lt;price&gt;500&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book&gt;
+        &lt;title&gt;Operating System&lt;/title&gt;
+        &lt;author&gt;Galvin&lt;/author&gt;
+        &lt;price&gt;650&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book&gt;
+        &lt;title&gt;Computer Networks&lt;/title&gt;
+        &lt;author&gt;Andrew S. Tanenbaum&lt;/author&gt;
+        &lt;price&gt;700&lt;/price&gt;
+    &lt;/book&gt;
+
+    &lt;book&gt;
+        &lt;title&gt;Database Management System&lt;/title&gt;
+        &lt;author&gt;Korth&lt;/author&gt;
+        &lt;price&gt;600&lt;/price&gt;
+    &lt;/book&gt;
+&lt;/library&gt;</div>
+</div>
+
+</body>
+</html>
